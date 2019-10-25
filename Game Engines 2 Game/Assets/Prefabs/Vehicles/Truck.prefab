@@ -6153,6 +6153,7 @@ GameObject:
   - component: {fileID: 2621523768900256707}
   - component: {fileID: 2621523768900256704}
   - component: {fileID: 2621523768900256705}
+  - component: {fileID: 267692418}
   m_Layer: 0
   m_Name: Truck
   m_TagString: AICar
@@ -6308,6 +6309,18 @@ MonoBehaviour:
   maxRolloffDistance: 500
   dopplerLevel: 1
   useDoppler: 1
+--- !u!114 &267692418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2621523768900256716}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96468c245ae8e0d4f8f1c7a7b8b0542e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2621523768900265359
 GameObject:
   m_ObjectHideFlags: 0
