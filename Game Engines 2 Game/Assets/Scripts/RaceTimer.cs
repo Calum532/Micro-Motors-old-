@@ -8,30 +8,32 @@ public class RaceTimer : MonoBehaviour
     public static float cTimer;
     private bool raceTimer = false;
 
-    public static float finishTime;
-    private bool finished;
-    public GameObject raceResultsUI;
-
+    public static bool finished;
     public static int MinuteCount;
     public static int SecondCount;
     public static float MilliCount;
     public static string MilliDisplay;
+    public static float RawTime;
 
+    public GameObject raceResultsUI;
     public GameObject MinuteBox;
     public GameObject SecondBox;
     public GameObject MilliBox;
 
     bool raceStarted = false;
     GameObject[] AICars;
+    GameObject Player;
 
     private void Start()
     {
         cTimer = countdownTimer;
-
+        FindObjectOfType<AudioManager>().Play("Race1Music");
+        Player = GameObject.FindGameObjectWithTag("Player");
         AICars = GameObject.FindGameObjectsWithTag("AICar");
         foreach (GameObject car in AICars)
         {
             car.GetComponent<CarAIControl>().enabled = false;
+            Player.GetComponent<CarUserControl>().enabled = false;
         }
     }
 
@@ -49,7 +51,6 @@ public class RaceTimer : MonoBehaviour
         {
             PauseMenu.gameIsPaused = false;
             raceTimer = true;
-
             raceStarted = true;
         }
 
@@ -57,6 +58,7 @@ public class RaceTimer : MonoBehaviour
         if (finished == false & raceTimer == true)
         {
             MilliCount += Time.deltaTime * 10;
+            RawTime += Time.deltaTime;
             MilliDisplay = MilliCount.ToString("F0");
             MilliBox.GetComponent<TextMeshProUGUI>().text = "" + MilliDisplay;
 
@@ -90,6 +92,8 @@ public class RaceTimer : MonoBehaviour
 
             if (raceStarted)
             {
+                Player.GetComponent<CarUserControl>().enabled = true;
+
                 foreach (GameObject car in AICars)
                 {
                     car.GetComponent<CarAIControl>().enabled = true;
