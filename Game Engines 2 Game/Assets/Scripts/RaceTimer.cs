@@ -15,10 +15,10 @@ public class RaceTimer : MonoBehaviour
     public static string MilliDisplay;
     public static float RawTime;
 
-    public GameObject raceResultsUI;
     public GameObject MinuteBox;
     public GameObject SecondBox;
     public GameObject MilliBox;
+    public GameObject CountdownContainer;
 
     bool raceStarted = false;
     GameObject[] AICars;
@@ -26,89 +26,90 @@ public class RaceTimer : MonoBehaviour
 
     private void Start()
     {
+        CountdownContainer.SetActive(true);
         cTimer = countdownTimer;
         FindObjectOfType<AudioManager>().Play("Race1Music");
-        Player = GameObject.FindGameObjectWithTag("Player");
-        AICars = GameObject.FindGameObjectsWithTag("AICar");
-        foreach (GameObject car in AICars)
-        {
-            car.GetComponent<CarAIControl>().enabled = false;
-            Player.GetComponent<CarUserControl>().enabled = false;
-        }
     }
 
     void Update()
     {
-        //start 3 second race countdown
-        if (raceTimer == false)
+        //if player has chosen a vehicle
+        if (ChooseRacer.RacerChosen)
         {
-            PauseMenu.gameIsPaused = true;
-            cTimer -= Time.deltaTime;
-        }
+            Player = GameObject.FindGameObjectWithTag("Player");
+            AICars = GameObject.FindGameObjectsWithTag("AICar");
 
-        //Race starts
-        if (cTimer <= 0f)
-        {
-            PauseMenu.gameIsPaused = false;
-            raceTimer = true;
-            raceStarted = true;
-        }
-
-        //Start lap timer
-        if (finished == false & raceTimer == true)
-        {
-            MilliCount += Time.deltaTime * 10;
-            RawTime += Time.deltaTime;
-            MilliDisplay = MilliCount.ToString("F0");
-            MilliBox.GetComponent<TextMeshProUGUI>().text = "" + MilliDisplay;
-
-            if (MilliCount >= 9)
+            //start 3 second race countdown
+            if (raceTimer == false)
             {
-                MilliCount = 0;
-                SecondCount += 1;
+                PauseMenu.gameIsPaused = true;
+                cTimer -= Time.deltaTime;
             }
 
-            if (SecondCount <= 9)
+            //Race starts
+            if (cTimer <= 0f)
             {
-                SecondBox.GetComponent<TextMeshProUGUI>().text = "0" + SecondCount + ".";
-            } else
-            {
-                SecondBox.GetComponent<TextMeshProUGUI>().text = "" + SecondCount + ".";
+                PauseMenu.gameIsPaused = false;
+                raceTimer = true;
+                raceStarted = true;
             }
 
-            if (SecondCount >= 60)
+            //Start lap timer
+            if (finished == false & raceTimer == true)
             {
-                SecondCount = 0;
-                MinuteCount += 1;
-            }
+                MilliCount += Time.deltaTime * 10;
+                RawTime += Time.deltaTime;
+                MilliDisplay = MilliCount.ToString("F0");
+                MilliBox.GetComponent<TextMeshProUGUI>().text = "" + MilliDisplay;
 
-            if (MinuteCount <= 9)
-            {
-                MinuteBox.GetComponent<TextMeshProUGUI>().text = "0" + MinuteCount + ":";
-            } else
-            {
-                MinuteBox.GetComponent<TextMeshProUGUI>().text = "" + MinuteCount + ":";
-            }
-
-            if (raceStarted)
-            {
-                Player.GetComponent<CarUserControl>().enabled = true;
-
-                foreach (GameObject car in AICars)
+                if (MilliCount >= 9)
                 {
-                    car.GetComponent<CarAIControl>().enabled = true;
+                    MilliCount = 0;
+                    SecondCount += 1;
+                }
+
+                if (SecondCount <= 9)
+                {
+                    SecondBox.GetComponent<TextMeshProUGUI>().text = "0" + SecondCount + ".";
+                }
+                else
+                {
+                    SecondBox.GetComponent<TextMeshProUGUI>().text = "" + SecondCount + ".";
+                }
+
+                if (SecondCount >= 60)
+                {
+                    SecondCount = 0;
+                    MinuteCount += 1;
+                }
+
+                if (MinuteCount <= 9)
+                {
+                    MinuteBox.GetComponent<TextMeshProUGUI>().text = "0" + MinuteCount + ":";
+                }
+                else
+                {
+                    MinuteBox.GetComponent<TextMeshProUGUI>().text = "" + MinuteCount + ":";
+                }
+
+                if (raceStarted)
+                {
+                    Player.GetComponent<CarUserControl>().enabled = true;
+
+                    foreach (GameObject car in AICars)
+                    {
+                        car.GetComponent<CarAIControl>().enabled = true;
+                    }
+                }
+                else
+                {
+                    Player.GetComponent<CarUserControl>().enabled = false;
+                    foreach (GameObject car in AICars)
+                    {
+                        car.GetComponent<CarAIControl>().enabled = false;
+                    }
                 }
             }
         }
-
-        //if player finishes race
-        /* if (Player finishes race)
-        {
-            finishTime = t;
-            finished = true;
-            timerText.color = Color.red;
-            raceResultsUI.SetActive(true);
-            PauseMenu.gameIsPaused = true;
-        } */
     }
 }

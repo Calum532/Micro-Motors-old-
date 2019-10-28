@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
@@ -8,7 +7,8 @@ namespace UnityStandardAssets.Vehicles.Car
     public class CarUserControl : MonoBehaviour
     {
         private CarController m_Car; // the car controller we want to use
-
+        public GameObject ReverseCam;
+        public GameObject FrontCam;
 
         private void Awake()
         {
@@ -28,6 +28,17 @@ namespace UnityStandardAssets.Vehicles.Car
 #else
             m_Car.Move(h, v, v, 0f);
 #endif
+
+            if (Input.GetKey(KeyCode.LeftControl))
+            {
+                ReverseCam.SetActive(true);
+                FrontCam.SetActive(false);
+            }
+            else
+            {
+                ReverseCam.SetActive(false);
+                FrontCam.SetActive(true);
+            }
         }
     }
 }

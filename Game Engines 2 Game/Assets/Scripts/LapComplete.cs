@@ -5,6 +5,7 @@ using UnityStandardAssets.Vehicles.Car;
 public class LapComplete : MonoBehaviour
 {
     public GameObject RaceCompleteUI;
+    public GameObject GameUI;
     public GameObject LapCompleteTrig;
     public GameObject HalfLapTrig;
     public GameObject BestMinuteDisplay;
@@ -12,6 +13,8 @@ public class LapComplete : MonoBehaviour
     public GameObject BestMilliDisplay;
     public GameObject LapTimeBox;
     public GameObject LapCounter;
+    public GameObject RaceCompleteCam;
+    public GameObject FrontCam;
 
     public int LapsDone = 1;
     public float RawTime;
@@ -50,13 +53,16 @@ public class LapComplete : MonoBehaviour
             BestMilliDisplay.GetComponent<TextMeshProUGUI>().text = "" + RaceTimer.MilliCount.ToString("F0");
         }
 
-        if(LapsDone >= 3)
+        if(LapsDone >= 1) //if race complete
         {
             PauseMenu.gameIsPaused = true;
             Player.GetComponent<CarUserControl>().enabled = false;
             Player.GetComponent<CarAIControl>().enabled = true;
             RaceCompleteUI.SetActive(true);
+            GameUI.SetActive(false);
             RaceTimer.finished = true;
+            RaceCompleteCam.SetActive(true);
+            FrontCam.SetActive(false);
         }
 
         PlayerPrefs.SetInt("BestMinSave", RaceTimer.MinuteCount);
