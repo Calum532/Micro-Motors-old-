@@ -15852,7 +15852,7 @@ MonoBehaviour:
   SkyCam: {fileID: 2036261144}
   PlayerRC: {fileID: 2035385977}
   PlayerUFO: {fileID: 1965734375}
-  PlayerTaxi: {fileID: 477491846}
+  PlayerTaxi: {fileID: 1466331449}
   PlayerTank: {fileID: 477491846}
   PlayerMonster: {fileID: 1692428245}
   PlayerTruck: {fileID: 444352938}
@@ -53544,6 +53544,12 @@ PrefabInstance:
 --- !u!4 &1466331448 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2471824973782573787, guid: 43e176977faf37e48a6e820b1890a49e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1466331447}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1466331449 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2471824973782573784, guid: 43e176977faf37e48a6e820b1890a49e,
     type: 3}
   m_PrefabInstance: {fileID: 1466331447}
   m_PrefabAsset: {fileID: 0}

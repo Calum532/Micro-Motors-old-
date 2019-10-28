@@ -5,7 +5,6 @@ public class MainMenu : MonoBehaviour
     public GameObject menuUI;
     public GameObject raceTypeUI;
     public GameObject raceTrackUI;
-    public GameObject chooseRacerUI;
     public GameObject settingsUI;
 
     public void RaceTypeSelect()
@@ -25,7 +24,6 @@ public class MainMenu : MonoBehaviour
         menuUI.SetActive(false);
         raceTypeUI.SetActive(false);
         raceTrackUI.SetActive(false);
-        chooseRacerUI.SetActive(true);
     }
 
     public void DisplaySettings()
@@ -40,7 +38,6 @@ public class MainMenu : MonoBehaviour
         raceTypeUI.SetActive(false);
         settingsUI.SetActive(false);
         raceTrackUI.SetActive(false);
-        chooseRacerUI.SetActive(false);
     }
 
     public void QuitGame()
