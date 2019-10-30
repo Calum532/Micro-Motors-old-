@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 8900000, guid: a7bed68887a07e34394d4191b3081359, type: 3}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.16238776, g: 0.4589082, b: 0.57614, a: 1}
+  m_IndirectSpecularColor: {r: 0.16238728, g: 0.4589069, b: 0.5761382, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &4
 LightmapSettings:
@@ -13029,19 +13029,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2156230631902111122}
   m_PrefabAsset: {fileID: 0}
---- !u!135 &1466331456
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1466331449}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 2.4
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1470471649
 GameObject:
   m_ObjectHideFlags: 0
@@ -19108,11 +19095,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupEffect: {fileID: 677985502}
   powerUp: {fileID: 2028169366}
-  respawnTimer: 5
-  effectTimer: 5
-  grow: 1.5
+  respawnDuration: 5
+  effectDuration: 10
+  grow: 2
   shrink: 0.5
-  normal: 1
 --- !u!135 &2028169368
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -42027,6 +42013,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 451692817}
     m_Modifications:
+    - target: {fileID: 5587674596140142008, guid: adf3986b3003bab4aa2a459e6765ca21,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1249272986677259315, guid: adf3986b3003bab4aa2a459e6765ca21,
         type: 3}
       propertyPath: m_Name

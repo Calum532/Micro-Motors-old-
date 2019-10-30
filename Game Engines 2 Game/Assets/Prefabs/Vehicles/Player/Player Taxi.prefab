@@ -820,6 +820,7 @@ GameObject:
   - component: {fileID: 2156230631077516463}
   - component: {fileID: 2156230631077516462}
   - component: {fileID: 2156230631077516457}
+  - component: {fileID: 4526134616896449090}
   m_Layer: 0
   m_Name: Player Taxi
   m_TagString: Player
@@ -990,6 +991,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ReverseCam: {fileID: 0}
   FrontCam: {fileID: 0}
+--- !u!65 &4526134616896449090
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2156230631077516459}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.9, y: 1.9, z: 4.441306}
+  m_Center: {x: 0, y: 0.4861927, z: -0.020653248}
 --- !u!1 &2156230631261154588
 GameObject:
   m_ObjectHideFlags: 0

@@ -464,9 +464,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 304dcd49a308da149a299d08c1ffbfd2, type: 2}
-  - {fileID: 5561349426305759274, guid: 1a8ef7595ec9e6844a0f9d6d1503988a, type: 3}
   - {fileID: 2100000, guid: d5ee9b6d5292cfe45811c19eb6914fd3, type: 2}
+  - {fileID: 5561349426305759274, guid: 1a8ef7595ec9e6844a0f9d6d1503988a, type: 3}
+  - {fileID: 2100000, guid: 169876ccb8e49de44bd802e034fbcf61, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -978,6 +978,7 @@ GameObject:
   - component: {fileID: 8596983093493156130}
   - component: {fileID: 8596983093493156129}
   - component: {fileID: 8596983093493156128}
+  - component: {fileID: 9030482657324866170}
   m_Layer: 0
   m_Name: Player Truck
   m_TagString: Player
@@ -1148,6 +1149,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ReverseCam: {fileID: 0}
   FrontCam: {fileID: 0}
+--- !u!65 &9030482657324866170
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8596983093493156134}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.3, y: 3.0192852, z: 5.243023}
+  m_Center: {x: 0, y: 1.2673535, z: -0.29815865}
 --- !u!1 &8596983093560051031
 GameObject:
   m_ObjectHideFlags: 0

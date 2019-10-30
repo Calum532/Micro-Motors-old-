@@ -1,100 +1,101 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections;
+using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
     public GameObject pickupEffect;
     public GameObject powerUp;
 
-    public float respawnTimer = 5f;
-    public float effectTimer = 5f;
+    public float respawnDuration = 5f;
+    public float effectDuration = 10f;
 
     private int RandomNum;
 
-    public float grow = 1.5f;
+    public float grow = 2f;
     public float shrink = 0.5f;
-    public float normal = 1f;
 
     private void OnTriggerEnter(Collider other)
     {
-        Instantiate(pickupEffect, transform.position, transform.rotation);
-        FindObjectOfType<AudioManager>().Play("PickUp");
-        powerUp.SetActive(false);
-        respawnCountdown();
-
         if (other.CompareTag("Player"))
         {
-            RandomNum = UnityEngine.Random.Range(0, 0);
+            Instantiate(pickupEffect, transform.position, transform.rotation);
+            FindObjectOfType<AudioManager>().Play("PickUp");
+            StartCoroutine(respawnCountdown());
+
+            RandomNum = UnityEngine.Random.Range(0, 1);
             if (RandomNum == 0)
             {
-                PickupGrow(other);
+                StartCoroutine( PickupGrow(other));
             }
             else if (RandomNum == 1)
             {
-                PickupShrink(other);
+                StartCoroutine( PickupShrink(other));
             }
-            else if (RandomNum == 2)
+            /*else if (RandomNum == 2)
             {
-                PickupBoost(other);
+                StartCoroutine( PickupBoost(other));
             }
             else if (RandomNum == 3)
             {
-                PickupBlur(other);
+                StartCoroutine( PickupBlur(other));
             }
             else if (RandomNum == 4)
             {
-                Pickup(other);
+                StartCoroutine( Pickup(other));
             }
             else if (RandomNum == 5)
             {
-                Pickup(other);
+                StartCoroutine( Pickup(other));
             }
             else
             {
-                Pickup(other);
-            }
+                StartCoroutine( Pickup(other));
+            }*/
         }
     }
 
-    void respawnCountdown()
+    IEnumerator respawnCountdown()
     {
-        respawnTimer -= Time.deltaTime;
+        GetComponent<MeshRenderer>().enabled = false;
+        GetComponent<Collider>().enabled = false;
 
-        if (respawnTimer <= 0f)
-        {
-            powerUp.SetActive(true);
-            respawnTimer = 5f;
-        }
+        yield return new WaitForSeconds(respawnDuration);
+
+        GetComponent<MeshRenderer>().enabled = true;
+        GetComponent<Collider>().enabled = true;
     }
 
-    void PickupGrow(Collider racer)
+    IEnumerator PickupGrow(Collider racer)
     {
+        FindObjectOfType<AudioManager>().Play("Buff");
+
         racer.transform.localScale *= grow;
-        effectTimer -= Time.deltaTime;
-
-        if (effectTimer <= 0f)
-        {
-            racer.transform.localScale *= shrink;
-            effectTimer = 5f;
-        }
+        yield return new WaitForSeconds(effectDuration);
+        racer.transform.localScale /= grow;
     }
 
-    void PickupShrink(Collider racer)
+    IEnumerator PickupShrink(Collider racer)
     {
+        FindObjectOfType<AudioManager>().Play("Debuff");
+
         racer.transform.localScale *= shrink;
+        yield return new WaitForSeconds(effectDuration);
+        racer.transform.localScale /= shrink;
     }
 
-    void PickupBoost(Collider racer)
+    /*IEnumerator PickupBoost(Collider racer)
     {
 
     }
 
-    void PickupBlur(Collider racer)
+    IEnumerator PickupBlur(Collider racer)
     {
 
     }
 
-    void Pickup(Collider racer)
+    IEnumerator Pickup(Collider racer)
     {
 
-    }
+    }*/
 }

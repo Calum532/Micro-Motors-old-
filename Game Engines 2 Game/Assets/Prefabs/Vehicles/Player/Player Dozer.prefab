@@ -203,6 +203,7 @@ GameObject:
   - component: {fileID: 1249272986677259327}
   - component: {fileID: 1249272986677259326}
   - component: {fileID: 3126617746116573842}
+  - component: {fileID: 5587674596140142008}
   m_Layer: 0
   m_Name: Player Dozer
   m_TagString: Player
@@ -373,6 +374,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ReverseCam: {fileID: 0}
   FrontCam: {fileID: 0}
+--- !u!65 &5587674596140142008
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249272986677259315}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.1, y: 3.3611894, z: 4.9123726}
+  m_Center: {x: 0, y: 1.1805947, z: -0.36173058}
 --- !u!1 &1249272986733213455
 GameObject:
   m_ObjectHideFlags: 0
