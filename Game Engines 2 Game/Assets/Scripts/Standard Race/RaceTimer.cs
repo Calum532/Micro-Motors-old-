@@ -14,11 +14,14 @@ public class RaceTimer : MonoBehaviour
     public static float MilliCount;
     public static string MilliDisplay;
     public static float RawTime;
+    public static float magnitudeSpeed;
+    public static double mphSpeed;
 
     public GameObject MinuteBox;
     public GameObject SecondBox;
     public GameObject MilliBox;
     public GameObject CountdownContainer;
+    public GameObject SpeedUI;
 
     bool raceStarted = false;
     GameObject[] AICars;
@@ -38,6 +41,10 @@ public class RaceTimer : MonoBehaviour
         {
             Player = GameObject.FindGameObjectWithTag("Player");
             AICars = GameObject.FindGameObjectsWithTag("AICar");
+
+            magnitudeSpeed = Player.GetComponent<Rigidbody>().velocity.magnitude;
+            mphSpeed = magnitudeSpeed * 2.222;
+            SpeedUI.GetComponent<TextMeshProUGUI>().text = mphSpeed.ToString("F0");
 
             //start 3 second race countdown
             if (raceTimer == false)
