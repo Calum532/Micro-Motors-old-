@@ -6,6 +6,7 @@ TagManager:
   tags:
   - AICar
   - CarParts
+  - Fire
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - Bullet_Ignore
   - Mini Map
   - Track
-  - 
+  - Racer Select
   - 
   - 
   - 

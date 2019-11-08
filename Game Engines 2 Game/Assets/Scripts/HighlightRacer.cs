@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class HighlightRacer : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class HighlightRacer : MonoBehaviour
     public GameObject Dozer;
     public GameObject SkyCar;
     public GameObject Random;
+    public GameObject RacerNameUI;
 
     public void mouseOverRC()
     {
@@ -26,6 +28,8 @@ public class HighlightRacer : MonoBehaviour
         SkyCar.SetActive(false);
         Random.SetActive(false);
         FindObjectOfType<AudioManager>().Play("Click");
+        RacerNameUI.GetComponent<TextMeshProUGUI>().text = "R.C.";
+        RacerNameUI.GetComponent<TextMeshProUGUI>().color = new Color32(0, 0, 255, 255);
     }
 
     public void mouseOverUFO()
@@ -40,6 +44,8 @@ public class HighlightRacer : MonoBehaviour
         SkyCar.SetActive(false);
         Random.SetActive(false);
         FindObjectOfType<AudioManager>().Play("Click");
+        RacerNameUI.GetComponent<TextMeshProUGUI>().text = "UFO";
+        RacerNameUI.GetComponent<TextMeshProUGUI>().color = new Color32(125, 125, 125, 255);
     }
 
     public void mouseOverTaxi()
@@ -54,6 +60,8 @@ public class HighlightRacer : MonoBehaviour
         SkyCar.SetActive(false);
         Random.SetActive(false);
         FindObjectOfType<AudioManager>().Play("Click");
+        RacerNameUI.GetComponent<TextMeshProUGUI>().text = "Taxi";
+        RacerNameUI.GetComponent<TextMeshProUGUI>().color = new Color32(255, 255, 0, 255);
     }
 
     public void mouseOverTruck()
@@ -68,6 +76,8 @@ public class HighlightRacer : MonoBehaviour
         SkyCar.SetActive(false);
         Random.SetActive(false);
         FindObjectOfType<AudioManager>().Play("Click");
+        RacerNameUI.GetComponent<TextMeshProUGUI>().text = "Truck";
+        RacerNameUI.GetComponent<TextMeshProUGUI>().color = new Color32(255, 0, 0, 255);
     }
 
     public void mouseOverTank()
@@ -82,6 +92,8 @@ public class HighlightRacer : MonoBehaviour
         SkyCar.SetActive(false);
         Random.SetActive(false);
         FindObjectOfType<AudioManager>().Play("Click");
+        RacerNameUI.GetComponent<TextMeshProUGUI>().text = "Tank";
+        RacerNameUI.GetComponent<TextMeshProUGUI>().color = new Color32(0, 150, 0, 255);
     }
 
     public void mouseOverMonster()
@@ -96,6 +108,8 @@ public class HighlightRacer : MonoBehaviour
         SkyCar.SetActive(false);
         Random.SetActive(false);
         FindObjectOfType<AudioManager>().Play("Click");
+        RacerNameUI.GetComponent<TextMeshProUGUI>().text = "Monster";
+        RacerNameUI.GetComponent<TextMeshProUGUI>().color = new Color32(125, 0, 255, 255);
     }
 
     public void mouseOverDozer()
@@ -110,6 +124,8 @@ public class HighlightRacer : MonoBehaviour
         SkyCar.SetActive(false);
         Random.SetActive(false);
         FindObjectOfType<AudioManager>().Play("Click");
+        RacerNameUI.GetComponent<TextMeshProUGUI>().text = "Dozer";
+        RacerNameUI.GetComponent<TextMeshProUGUI>().color = new Color32(255, 125, 0, 255);
     }
 
     public void mouseOverSkyCar()
@@ -124,6 +140,8 @@ public class HighlightRacer : MonoBehaviour
         SkyCar.SetActive(true);
         Random.SetActive(false);
         FindObjectOfType<AudioManager>().Play("Click");
+        RacerNameUI.GetComponent<TextMeshProUGUI>().text = "Sky Car";
+        RacerNameUI.GetComponent<TextMeshProUGUI>().color = new Color32(0, 255, 255, 255);
     }
 
     public void mouseOverRandom()
@@ -138,5 +156,7 @@ public class HighlightRacer : MonoBehaviour
         SkyCar.SetActive(false);
         Random.SetActive(true);
         FindObjectOfType<AudioManager>().Play("Click");
+        RacerNameUI.GetComponent<TextMeshProUGUI>().text = "?????????";
+        RacerNameUI.GetComponent<TextMeshProUGUI>().color = new Color32(255, 255, 255, 255);
     }
 }
