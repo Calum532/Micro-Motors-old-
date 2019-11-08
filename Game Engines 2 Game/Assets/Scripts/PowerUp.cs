@@ -6,6 +6,10 @@ public class PowerUp : MonoBehaviour
 {
     public GameObject pickupEffect;
     public GameObject powerUp;
+    public GameObject child1;
+    public GameObject child2;
+    public GameObject child3;
+    public GameObject child4;
 
     public float respawnDuration = 5f;
     public float effectDuration = 10f;
@@ -59,11 +63,19 @@ public class PowerUp : MonoBehaviour
     {
         GetComponent<MeshRenderer>().enabled = false;
         GetComponent<Collider>().enabled = false;
+        child1.GetComponent<MeshRenderer>().enabled = false;
+        child2.GetComponent<MeshRenderer>().enabled = false;
+        child3.GetComponent<MeshRenderer>().enabled = false;
+        child4.GetComponent<MeshRenderer>().enabled = false;
 
         yield return new WaitForSeconds(respawnDuration);
 
         GetComponent<MeshRenderer>().enabled = true;
         GetComponent<Collider>().enabled = true;
+        child1.GetComponent<MeshRenderer>().enabled = true;
+        child2.GetComponent<MeshRenderer>().enabled = true;
+        child3.GetComponent<MeshRenderer>().enabled = true;
+        child4.GetComponent<MeshRenderer>().enabled = true;
     }
 
     IEnumerator PickupGrow(Collider racer)
