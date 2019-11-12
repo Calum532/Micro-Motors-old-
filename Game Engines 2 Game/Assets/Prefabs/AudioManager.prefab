@@ -47,10 +47,37 @@ MonoBehaviour:
   sounds:
   - name: Race1Music
     clip: {fileID: 8300000, guid: 7be8a0ed0f968ca439ee68512e0f9efd, type: 3}
-    volume: 0.3
+    volume: 0.2
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0
     loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: PickUp
+    clip: {fileID: 8300000, guid: 7ced09c52b7835848a7fa0a559ad7f6f, type: 3}
+    volume: 0.5
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Boost
+    clip: {fileID: 8300000, guid: 7c29c309722a2444582a425e8e6aeb77, type: 3}
+    volume: 0.5
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Click
+    clip: {fileID: 8300000, guid: 0b64b4a923f54dd419a170d9ff915f36, type: 3}
+    volume: 0.3
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
