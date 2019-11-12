@@ -53,7 +53,7 @@ public class LapComplete : MonoBehaviour
             BestMilliDisplay.GetComponent<TextMeshProUGUI>().text = "" + RaceTimer.MilliCount.ToString("F0");
         }
 
-        if(LapsDone >= 1) //if race complete
+        if(LapsDone >= 3) //if race complete
         {
             PauseMenu.gameIsPaused = true;
             Player.GetComponent<CarUserControl>().enabled = false;
@@ -63,6 +63,8 @@ public class LapComplete : MonoBehaviour
             RaceTimer.finished = true;
             RaceCompleteCam.SetActive(true);
             FrontCam.SetActive(false);
+            GlobalCash.TotalCash += 100;
+            PlayerPrefs.SetInt("SavedCash", GlobalCash.TotalCash);
         }
 
         PlayerPrefs.SetInt("BestMinSave", RaceTimer.MinuteCount);

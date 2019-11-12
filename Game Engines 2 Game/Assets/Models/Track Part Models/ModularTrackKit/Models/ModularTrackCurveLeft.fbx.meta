@@ -1,36 +1,92 @@
 fileFormatVersion: 2
 guid: a0922edcbe6b74564b40735068507f0c
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: LaneDividers
-    100002: //RootNode
-    100004: ModularTrackCurveLeft
-    100006: TwirlOrigin
-    100008: TwirlOrigin.001
-    100010: LaneDivider
-    400000: LaneDividers
-    400002: //RootNode
-    400004: ModularTrackCurveLeft
-    400006: TwirlOrigin
-    400008: TwirlOrigin.001
-    400010: LaneDivider
-    2100000: No Name
-    2300000: LaneDividers
-    2300002: ModularTrackCurveLeft
-    2300004: LaneDivider
-    2300006: //RootNode
-    3300000: LaneDividers
-    3300002: ModularTrackCurveLeft
-    3300004: LaneDivider
-    3300006: //RootNode
-    4300000: ModularTrackCurveLeft
-    4300002: LaneDividers
-    4300004: LaneDivider
-    6400000: LaneDividers
-    6400002: ModularTrackCurveLeft
-    6400004: LaneDivider
-    6400006: //RootNode
+  serializedVersion: 26
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: LaneDividers
+  - first:
+      1: 100002
+    second: //RootNode
+  - first:
+      1: 100004
+    second: ModularTrackCurveLeft
+  - first:
+      1: 100006
+    second: TwirlOrigin
+  - first:
+      1: 100008
+    second: TwirlOrigin.001
+  - first:
+      1: 100010
+    second: LaneDivider
+  - first:
+      4: 400000
+    second: LaneDividers
+  - first:
+      4: 400002
+    second: //RootNode
+  - first:
+      4: 400004
+    second: ModularTrackCurveLeft
+  - first:
+      4: 400006
+    second: TwirlOrigin
+  - first:
+      4: 400008
+    second: TwirlOrigin.001
+  - first:
+      4: 400010
+    second: LaneDivider
+  - first:
+      21: 2100000
+    second: No Name
+  - first:
+      23: 2300000
+    second: LaneDividers
+  - first:
+      23: 2300002
+    second: ModularTrackCurveLeft
+  - first:
+      23: 2300004
+    second: LaneDivider
+  - first:
+      23: 2300006
+    second: //RootNode
+  - first:
+      33: 3300000
+    second: LaneDividers
+  - first:
+      33: 3300002
+    second: ModularTrackCurveLeft
+  - first:
+      33: 3300004
+    second: LaneDivider
+  - first:
+      33: 3300006
+    second: //RootNode
+  - first:
+      43: 4300000
+    second: ModularTrackCurveLeft
+  - first:
+      43: 4300002
+    second: LaneDividers
+  - first:
+      43: 4300004
+    second: LaneDivider
+  - first:
+      64: 6400000
+    second: LaneDividers
+  - first:
+      64: 6400002
+    second: ModularTrackCurveLeft
+  - first:
+      64: 6400004
+    second: LaneDivider
+  - first:
+      64: 6400006
+    second: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 0
@@ -62,10 +118,11 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 2.85
     meshCompression: 0
     addColliders: 1
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 0
     importBlendShapes: 0
     importCameras: 0
@@ -73,18 +130,19 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 1
@@ -93,10 +151,11 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 0
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -106,6 +165,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 0.028499998
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

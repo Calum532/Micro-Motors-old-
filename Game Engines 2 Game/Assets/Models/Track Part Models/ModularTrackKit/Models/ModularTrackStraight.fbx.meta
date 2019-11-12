@@ -1,28 +1,68 @@
 fileFormatVersion: 2
 guid: 4c266eccb4ff24ae9aeaf6fa734f60ea
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: LaneDividers
-    100004: LaneDivider
-    400000: //RootNode
-    400002: LaneDividers
-    400004: LaneDivider
-    2100000: No Name
-    2300000: //RootNode
-    2300002: LaneDividers
-    2300004: LaneDivider
-    3300000: //RootNode
-    3300002: LaneDividers
-    3300004: LaneDivider
-    4300000: Cube
-    4300002: ModularTrackStraight
-    4300004: LaneDividers
-    4300006: LaneDivider
-    6400000: LaneDividers
-    6400002: //RootNode
-    6400004: LaneDivider
+  serializedVersion: 26
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: LaneDividers
+  - first:
+      1: 100004
+    second: LaneDivider
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: LaneDividers
+  - first:
+      4: 400004
+    second: LaneDivider
+  - first:
+      21: 2100000
+    second: No Name
+  - first:
+      23: 2300000
+    second: //RootNode
+  - first:
+      23: 2300002
+    second: LaneDividers
+  - first:
+      23: 2300004
+    second: LaneDivider
+  - first:
+      33: 3300000
+    second: //RootNode
+  - first:
+      33: 3300002
+    second: LaneDividers
+  - first:
+      33: 3300004
+    second: LaneDivider
+  - first:
+      43: 4300000
+    second: Cube
+  - first:
+      43: 4300002
+    second: ModularTrackStraight
+  - first:
+      43: 4300004
+    second: LaneDividers
+  - first:
+      43: 4300006
+    second: LaneDivider
+  - first:
+      64: 6400000
+    second: LaneDividers
+  - first:
+      64: 6400002
+    second: //RootNode
+  - first:
+      64: 6400004
+    second: LaneDivider
   externalObjects: {}
   materials:
     importMaterials: 0
@@ -54,10 +94,11 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 2.85
     meshCompression: 0
     addColliders: 1
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 0
     importBlendShapes: 0
     importCameras: 0
@@ -65,18 +106,19 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 1
@@ -85,10 +127,11 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 0
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -98,6 +141,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 0.028499998
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
