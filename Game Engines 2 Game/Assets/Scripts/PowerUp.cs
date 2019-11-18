@@ -14,10 +14,17 @@ public class PowerUp : MonoBehaviour
     public float respawnDuration = 5f;
     public float effectDuration = 10f;
 
-    private int RandomNum;
+    private int randomNum;
 
     public float grow = 2f;
     public float shrink = 0.5f;
+
+    public float rotateSpeed;
+
+    private void Update()
+    {
+        transform.Rotate(Vector3.up * rotateSpeed * Time.deltaTime);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -27,12 +34,12 @@ public class PowerUp : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("PickUp");
             StartCoroutine(respawnCountdown());
 
-            RandomNum = UnityEngine.Random.Range(0, 1);
-            if (RandomNum == 0)
+            randomNum = UnityEngine.Random.Range(0, 1);
+            if (randomNum == 0)
             {
                 StartCoroutine( PickupGrow(other));
             }
-            else if (RandomNum == 1)
+            else if (randomNum == 1)
             {
                 StartCoroutine( PickupShrink(other));
             }

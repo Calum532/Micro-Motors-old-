@@ -431,3 +431,4 @@ MonoBehaviour:
   effectDuration: 10
   grow: 2
   shrink: 0.5
+  rotateSpeed: 75

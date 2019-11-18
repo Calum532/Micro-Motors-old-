@@ -44,10 +44,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 681, y: 494}
+  m_MinSize: {x: 679, y: 494}
   m_MaxSize: {x: 14002, y: 14044}
   vertical: 0
-  controlID: 56
+  controlID: 154
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -128,7 +128,7 @@ MonoBehaviour:
   - {fileID: 20}
   - {fileID: 12}
   m_Selected: 0
-  m_LastSelected: 0
+  m_LastSelected: 1
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -217,10 +217,10 @@ MonoBehaviour:
     y: 0
     width: 1514
     height: 947
-  m_MinSize: {x: 406, y: 494}
+  m_MinSize: {x: 404, y: 494}
   m_MaxSize: {x: 10002, y: 14044}
   vertical: 1
-  controlID: 57
+  controlID: 77
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -242,10 +242,10 @@ MonoBehaviour:
     y: 0
     width: 1514
     height: 599
-  m_MinSize: {x: 406, y: 222}
-  m_MaxSize: {x: 8006, y: 4022}
+  m_MinSize: {x: 404, y: 222}
+  m_MaxSize: {x: 8004, y: 4022}
   vertical: 0
-  controlID: 58
+  controlID: 78
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -265,8 +265,8 @@ MonoBehaviour:
     y: 0
     width: 1141
     height: 599
-  m_MinSize: {x: 204, y: 222}
-  m_MaxSize: {x: 4004, y: 4022}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -295,9 +295,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 646
-    width: 1531
-    height: 355
+    y: 672
+    width: 1514
+    height: 329
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &13
 MonoBehaviour:
@@ -351,10 +351,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 379
+    x: 373
     y: 73
-    width: 1150
-    height: 554
+    width: 1139
+    height: 580
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &15
 MonoBehaviour:
@@ -395,21 +395,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Materials/Vehicles
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Materials/Vehicles
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Calum\Documents\GitHub\Game-Engines-2-Project\Game Engines
     2 Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 1127}
-    m_SelectedIDs: 50490000
-    m_LastClickedID: 18768
-    m_ExpandedIDs: 000000007635000036360000aa370000d03a00000c3c0000ca3c0000283d0000823d00005c3f0000fc3f0000fe3f0000ae4000003a41000062410000804100008a44000020460000c8490000104a00002c4d0000124e00006e4e00006050000076500000a0550000b65500001a57000094570000e85f0000ea5f0000ec5f0000ee5f0000602a0500ba2a0500082b0500222b0500002c0500c02c05000e2d0500e82d0500
+    scrollPos: {x: 0, y: 391}
+    m_SelectedIDs: aa4c0000
+    m_LastClickedID: 19626
+    m_ExpandedIDs: 000000007a3700006e380000003a0000983d000030400000984000009c42000054430000564300000c440000a6440000d2440000f444000030480000da490000aa4c0000ca4d00007e51000070520000de520000f85400000c5500007c5a0000985a0000265c0000e6930000e8930000ea930000ec930000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -437,7 +437,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000007635000036360000d03a0000823d00005c3f0000fe3f0000ae4000003a410000624100008a44000020460000c84900002c4d0000124e00006e4e000060500000765000003a550000a05500001a570000e85f0000ea5f0000ec5f0000ee5f0000
+    m_ExpandedIDs: 000000007a3700006e380000003a0000983d000030400000984000009c42000054430000564300000c440000a6440000d2440000f444000030480000da490000ca4d00007e51000070520000de520000f85400000c5500007c5a0000985a0000265c0000e6930000e8930000ea930000ec930000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -558,9 +558,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 2a69e1ff
-      m_LastClickedID: -2004694
-      m_ExpandedIDs: 58f3e1ff4421e2ffd24fe2ff5291e2ff7cb8e2ff84bef1ff94c9f1ff2c57f7ff6457f7ff5e91f7ff00b1f7ff7aa5ffffc6dfffff30e0ffffa0ecffff1cf5ffff80f6ffff74fbffff925a0000f65a00005c5c00007e600000ce7b0000107c0000987e0000c47e00007a7f00004e8000008a810000a8750500
+      m_SelectedIDs: 64610000
+      m_LastClickedID: 24932
+      m_ExpandedIDs: 72fbffff64610000d0630000d46600000e670000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -620,9 +620,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -123.429886, y: 166.51288, z: -178.48111}
+    m_Target: {x: 4.2076187, y: -14.602287, z: -8.596324}
     speed: 2
-    m_Value: {x: -123.429886, y: 166.51288, z: -178.48111}
+    m_Value: {x: 4.2076187, y: -14.602287, z: -8.596324}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -651,13 +651,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.3181918, y: 0.11707222, z: -0.039636843, w: -0.9399962}
+    m_Target: {x: -0.21796207, y: 0.136218, z: -0.031316552, w: -0.9660194}
     speed: 2
-    m_Value: {x: -0.31952286, y: 0.1184149, z: -0.04028947, w: -0.9392868}
+    m_Value: {x: -0.21793625, y: 0.13620186, z: -0.031312842, w: -0.96590495}
   m_Size:
-    m_Target: 435.1619
+    m_Target: 271.2165
     speed: 2
-    m_Value: 433.99646
+    m_Value: 271.2165
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -676,7 +676,7 @@ MonoBehaviour:
     m_DynamicClip: 1
     m_OcclusionCulling: 0
   m_ShowGlobalGrid: 1
-  m_LastSceneViewRotation: {x: 0, y: 0, z: 0, w: 0}
+  m_LastSceneViewRotation: {x: -0.13623093, y: 0.4104595, z: -0.062164824, w: -0.89949965}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 

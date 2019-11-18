@@ -6,6 +6,24 @@ using UnityEngine.UI;
 
 public class Garage : MonoBehaviour
 {
+    public static bool RCOwned = false;
+    public static bool UFOOwned = false;
+    public static bool TaxiOwned = false;
+    public static bool TruckOwned = true;
+    public static bool TankOwned = false;
+    public static bool MonsterOwned = false;
+    public static bool DozerOwned = false;
+    public static bool SkyCarOwned = false;
+
+    public int RCCost;
+    public int UFOCost;
+    public int TaxiCost;
+    public int TruckCost;
+    public int TankCost;
+    public int MonsterCost;
+    public int DozerCost;
+    public int SkyCarCost;
+
     public GameObject RC;
     public GameObject UFO;
     public GameObject Taxi;
@@ -23,6 +41,24 @@ public class Garage : MonoBehaviour
     public GameObject MonsterBorder;
     public GameObject DozerBorder;
     public GameObject SkyCarBorder;
+
+    public GameObject RCTick;
+    public GameObject UFOTick;
+    public GameObject TaxiTick;
+    public GameObject TruckTick;
+    public GameObject TankTick;
+    public GameObject MonsterTick;
+    public GameObject DozerTick;
+    public GameObject SkyCarTick;
+
+    public GameObject RCCross;
+    public GameObject UFOCross;
+    public GameObject TaxiCross;
+    public GameObject TruckCross;
+    public GameObject TankCross;
+    public GameObject MonsterCross;
+    public GameObject DozerCross;
+    public GameObject SkyCarCross;
 
     public GameObject RacerNameUI;
     public GameObject RacerPrice;
@@ -72,7 +108,16 @@ public class Garage : MonoBehaviour
         WeightFill.color = new Color32(0, 0, 255, 255);
 
         FindObjectOfType<AudioManager>().Play("Click");
-        RacerPrice.GetComponent<TextMeshProUGUI>().text = "Price: $"+100;
+
+        if(RCOwned == false)
+        {
+            RacerPrice.GetComponent<TextMeshProUGUI>().text = "Price: $" + RCCost;
+        }
+        else if(RCOwned == true)
+        {
+            RacerPrice.GetComponent<TextMeshProUGUI>().text = "Owned";
+        }
+
         RacerNameUI.GetComponent<TextMeshProUGUI>().text = "R.C.";
         RacerNameUI.GetComponent<TextMeshProUGUI>().color = new Color32(0, 0, 255, 255);
     }
@@ -110,7 +155,16 @@ public class Garage : MonoBehaviour
         WeightFill.color = new Color32(169, 169, 169, 255);
 
         FindObjectOfType<AudioManager>().Play("Click");
-        RacerPrice.GetComponent<TextMeshProUGUI>().text = "Price: $" + 200;
+
+        if (UFOOwned == false)
+        {
+            RacerPrice.GetComponent<TextMeshProUGUI>().text = "Price: $" + UFOCost;
+        }
+        else if (UFOOwned == true)
+        {
+            RacerPrice.GetComponent<TextMeshProUGUI>().text = "Owned";
+        }
+
         RacerNameUI.GetComponent<TextMeshProUGUI>().text = "UFO";
         RacerNameUI.GetComponent<TextMeshProUGUI>().color = new Color32(169, 169, 169, 255);
     }
@@ -148,7 +202,16 @@ public class Garage : MonoBehaviour
         WeightFill.color = new Color32(255, 255, 0, 255);
 
         FindObjectOfType<AudioManager>().Play("Click");
-        RacerPrice.GetComponent<TextMeshProUGUI>().text = "Price: $" + 300;
+
+        if (TaxiOwned == false)
+        {
+            RacerPrice.GetComponent<TextMeshProUGUI>().text = "Price: $" + TaxiCost;
+        }
+        else if (TaxiOwned == true)
+        {
+            RacerPrice.GetComponent<TextMeshProUGUI>().text = "Owned";
+        }
+
         RacerNameUI.GetComponent<TextMeshProUGUI>().text = "Taxi";
         RacerNameUI.GetComponent<TextMeshProUGUI>().color = new Color32(255, 255, 0, 255);
     }
@@ -186,7 +249,16 @@ public class Garage : MonoBehaviour
         WeightFill.color = new Color32(255, 0, 0, 255);
 
         FindObjectOfType<AudioManager>().Play("Click");
-        RacerPrice.GetComponent<TextMeshProUGUI>().text = "Price: $" + 400;
+
+        if (TruckOwned == false)
+        {
+            RacerPrice.GetComponent<TextMeshProUGUI>().text = "Price: $" + TruckCost;
+        }
+        else if (TruckOwned == true)
+        {
+            RacerPrice.GetComponent<TextMeshProUGUI>().text = "Owned";
+        }
+
         RacerNameUI.GetComponent<TextMeshProUGUI>().text = "Truck";
         RacerNameUI.GetComponent<TextMeshProUGUI>().color = new Color32(255, 0, 0, 255);
     }
@@ -224,7 +296,16 @@ public class Garage : MonoBehaviour
         WeightFill.color = new Color32(0, 150, 0, 255);
 
         FindObjectOfType<AudioManager>().Play("Click");
-        RacerPrice.GetComponent<TextMeshProUGUI>().text = "Price: $" + 500;
+
+        if (TankOwned == false)
+        {
+            RacerPrice.GetComponent<TextMeshProUGUI>().text = "Price: $" + TankCost;
+        }
+        else if (TankOwned == true)
+        {
+            RacerPrice.GetComponent<TextMeshProUGUI>().text = "Owned";
+        }
+
         RacerNameUI.GetComponent<TextMeshProUGUI>().text = "Tank";
         RacerNameUI.GetComponent<TextMeshProUGUI>().color = new Color32(0, 150, 0, 255);
     }
@@ -262,7 +343,16 @@ public class Garage : MonoBehaviour
         WeightFill.color = new Color32(125, 0, 255, 255);
 
         FindObjectOfType<AudioManager>().Play("Click");
-        RacerPrice.GetComponent<TextMeshProUGUI>().text = "Price: $" + 600;
+
+        if (MonsterOwned == false)
+        {
+            RacerPrice.GetComponent<TextMeshProUGUI>().text = "Price: $" + MonsterCost;
+        }
+        else if (MonsterOwned == true)
+        {
+            RacerPrice.GetComponent<TextMeshProUGUI>().text = "Owned";
+        }
+
         RacerNameUI.GetComponent<TextMeshProUGUI>().text = "Monster";
         RacerNameUI.GetComponent<TextMeshProUGUI>().color = new Color32(125, 0, 255, 255);
     }
@@ -300,7 +390,16 @@ public class Garage : MonoBehaviour
         WeightFill.color = new Color32(255, 125, 0, 255);
 
         FindObjectOfType<AudioManager>().Play("Click");
-        RacerPrice.GetComponent<TextMeshProUGUI>().text = "Price: $" + 700;
+
+        if (DozerOwned == false)
+        {
+            RacerPrice.GetComponent<TextMeshProUGUI>().text = "Price: $" + DozerCost;
+        }
+        else if (DozerOwned == true)
+        {
+            RacerPrice.GetComponent<TextMeshProUGUI>().text = "Owned";
+        }
+
         RacerNameUI.GetComponent<TextMeshProUGUI>().text = "Dozer";
         RacerNameUI.GetComponent<TextMeshProUGUI>().color = new Color32(255, 125, 0, 255);
     }
@@ -338,8 +437,98 @@ public class Garage : MonoBehaviour
         WeightFill.color = new Color32(0, 255, 255, 255);
 
         FindObjectOfType<AudioManager>().Play("Click");
-        RacerPrice.GetComponent<TextMeshProUGUI>().text = "Owned";
+
+        if (SkyCarOwned == false)
+        {
+            RacerPrice.GetComponent<TextMeshProUGUI>().text = "Price: $" + SkyCarCost;
+        }
+        else if (SkyCarOwned == true)
+        {
+            RacerPrice.GetComponent<TextMeshProUGUI>().text = "Owned";
+        }
+
         RacerNameUI.GetComponent<TextMeshProUGUI>().text = "Sky Car";
         RacerNameUI.GetComponent<TextMeshProUGUI>().color = new Color32(0, 255, 255, 255);
+    }
+
+    public void ClickPurchase()
+    {
+        if(RC.activeInHierarchy && GlobalCash.TotalCash >= RCCost)
+        {
+            FindObjectOfType<AudioManager>().Play("Cha-Ching");
+            GlobalCash.TotalCash = GlobalCash.TotalCash - RCCost;
+            RCOwned = true;
+            RCTick.SetActive(true);
+            RCCross.SetActive(false);
+            RCCost = 0;
+            RacerPrice.GetComponent<TextMeshProUGUI>().text = "Owned";
+        } else if(UFO.activeInHierarchy && GlobalCash.TotalCash >= UFOCost)
+        {
+            FindObjectOfType<AudioManager>().Play("Cha-Ching");
+            GlobalCash.TotalCash = GlobalCash.TotalCash - UFOCost;
+            UFOOwned = true;
+            UFOTick.SetActive(true);
+            UFOCross.SetActive(false);
+            UFOCost = 0;
+            RacerPrice.GetComponent<TextMeshProUGUI>().text = "Owned";
+        } else if(Taxi.activeInHierarchy && GlobalCash.TotalCash >= TaxiCost)
+        {
+            FindObjectOfType<AudioManager>().Play("Cha-Ching");
+            GlobalCash.TotalCash = GlobalCash.TotalCash - TaxiCost;
+            TaxiOwned = true;
+            TaxiTick.SetActive(true);
+            TaxiCross.SetActive(false);
+            TaxiCost = 0;
+            RacerPrice.GetComponent<TextMeshProUGUI>().text = "Owned";
+        } else if(Truck.activeInHierarchy && GlobalCash.TotalCash >= TruckCost)
+        {
+            FindObjectOfType<AudioManager>().Play("Cha-Ching");
+            GlobalCash.TotalCash = GlobalCash.TotalCash - TruckCost;
+            TruckOwned = true;
+            TruckTick.SetActive(true);
+            TruckCross.SetActive(false);
+            TruckCost = 0;
+            RacerPrice.GetComponent<TextMeshProUGUI>().text = "Owned";
+        } else if(Tank.activeInHierarchy && GlobalCash.TotalCash >= TankCost)
+        {
+            FindObjectOfType<AudioManager>().Play("Cha-Ching");
+            GlobalCash.TotalCash = GlobalCash.TotalCash - TankCost;
+            TankOwned = true;
+            TankTick.SetActive(true);
+            TankCross.SetActive(false);
+            TankCost = 0;
+            RacerPrice.GetComponent<TextMeshProUGUI>().text = "Owned";
+        } else if(Monster.activeInHierarchy && GlobalCash.TotalCash >= MonsterCost)
+        {
+            FindObjectOfType<AudioManager>().Play("Cha-Ching");
+            GlobalCash.TotalCash = GlobalCash.TotalCash - MonsterCost;
+            MonsterOwned = true;
+            MonsterTick.SetActive(true);
+            MonsterCross.SetActive(false);
+            MonsterCost = 0;
+            RacerPrice.GetComponent<TextMeshProUGUI>().text = "Owned";
+        } else if (Dozer.activeInHierarchy && GlobalCash.TotalCash >= DozerCost)
+        {
+            FindObjectOfType<AudioManager>().Play("Cha-Ching");
+            GlobalCash.TotalCash = GlobalCash.TotalCash - DozerCost;
+            DozerOwned = true;
+            DozerTick.SetActive(true);
+            DozerCross.SetActive(false);
+            DozerCost = 0;
+            RacerPrice.GetComponent<TextMeshProUGUI>().text = "Owned";
+        } else if (SkyCar.activeInHierarchy && GlobalCash.TotalCash >= SkyCarCost)
+        {
+            FindObjectOfType<AudioManager>().Play("Cha-Ching");
+            GlobalCash.TotalCash = GlobalCash.TotalCash - SkyCarCost;
+            SkyCarOwned = true;
+            SkyCarTick.SetActive(true);
+            SkyCarCross.SetActive(false);
+            SkyCarCost = 0;
+            RacerPrice.GetComponent<TextMeshProUGUI>().text = "Owned";
+        }
+        else
+        {
+            FindObjectOfType<AudioManager>().Play("Nope");
+        }
     }
 }
