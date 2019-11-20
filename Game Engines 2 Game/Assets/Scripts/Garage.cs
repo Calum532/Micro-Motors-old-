@@ -95,11 +95,11 @@ public class Garage : MonoBehaviour
         DozerBorder.SetActive(false);
         SkyCarBorder.SetActive(false);
 
-        TopSpeedSlider.value = 1;
-        AccelerationSlider.value = 1;
-        GripSlider.value = 1;
-        HandlingSlider.value = 1;
-        WeightSlider.value = 1;
+        TopSpeedSlider.value = 2;
+        AccelerationSlider.value = 10;
+        GripSlider.value = 6;
+        HandlingSlider.value = 10;
+        WeightSlider.value = 2;
 
         TopSpeedFill.color = new Color32(0, 0, 255, 255);
         AccelerationFill.color = new Color32(0, 0, 255, 255);
@@ -142,11 +142,11 @@ public class Garage : MonoBehaviour
         DozerBorder.SetActive(false);
         SkyCarBorder.SetActive(false);
 
-        TopSpeedSlider.value = 2;
-        AccelerationSlider.value = 2;
+        TopSpeedSlider.value = 10;
+        AccelerationSlider.value = 10;
         GripSlider.value = 2;
-        HandlingSlider.value = 2;
-        WeightSlider.value = 2;
+        HandlingSlider.value = 4;
+        WeightSlider.value = 4;
 
         TopSpeedFill.color = new Color32(169, 169, 169, 255);
         AccelerationFill.color = new Color32(169, 169, 169, 255);
@@ -189,11 +189,11 @@ public class Garage : MonoBehaviour
         DozerBorder.SetActive(false);
         SkyCarBorder.SetActive(false);
 
-        TopSpeedSlider.value = 3;
-        AccelerationSlider.value = 3;
-        GripSlider.value = 3;
-        HandlingSlider.value = 3;
-        WeightSlider.value = 3;
+        TopSpeedSlider.value = 6;
+        AccelerationSlider.value = 8;
+        GripSlider.value = 6;
+        HandlingSlider.value = 6;
+        WeightSlider.value = 4;
 
         TopSpeedFill.color = new Color32(255, 255, 0, 255);
         AccelerationFill.color = new Color32(255, 255, 0, 255);
@@ -236,11 +236,11 @@ public class Garage : MonoBehaviour
         DozerBorder.SetActive(false);
         SkyCarBorder.SetActive(false);
 
-        TopSpeedSlider.value = 4;
-        AccelerationSlider.value = 4;
-        GripSlider.value = 4;
+        TopSpeedSlider.value = 6;
+        AccelerationSlider.value = 6;
+        GripSlider.value = 6;
         HandlingSlider.value = 4;
-        WeightSlider.value = 4;
+        WeightSlider.value = 8;
 
         TopSpeedFill.color = new Color32(255, 0, 0, 255);
         AccelerationFill.color = new Color32(255, 0, 0, 255);
@@ -283,11 +283,11 @@ public class Garage : MonoBehaviour
         DozerBorder.SetActive(false);
         SkyCarBorder.SetActive(false);
 
-        TopSpeedSlider.value = 5;
-        AccelerationSlider.value = 5;
-        GripSlider.value = 5;
-        HandlingSlider.value = 5;
-        WeightSlider.value = 5;
+        TopSpeedSlider.value = 4;
+        AccelerationSlider.value = 2;
+        GripSlider.value = 8;
+        HandlingSlider.value = 6;
+        WeightSlider.value = 10;
 
         TopSpeedFill.color = new Color32(0, 150, 0, 255);
         AccelerationFill.color = new Color32(0, 150, 0, 255);
@@ -331,10 +331,10 @@ public class Garage : MonoBehaviour
         SkyCarBorder.SetActive(false);
 
         TopSpeedSlider.value = 6;
-        AccelerationSlider.value = 6;
-        GripSlider.value = 6;
-        HandlingSlider.value = 6;
-        WeightSlider.value = 6;
+        AccelerationSlider.value = 8;
+        GripSlider.value = 4;
+        HandlingSlider.value = 4;
+        WeightSlider.value = 8;
 
         TopSpeedFill.color = new Color32(125, 0, 255, 255);
         AccelerationFill.color = new Color32(125, 0, 255, 255);
@@ -377,11 +377,11 @@ public class Garage : MonoBehaviour
         DozerBorder.SetActive(true);
         SkyCarBorder.SetActive(false);
 
-        TopSpeedSlider.value = 7;
-        AccelerationSlider.value = 7;
-        GripSlider.value = 7;
-        HandlingSlider.value = 7;
-        WeightSlider.value = 7;
+        TopSpeedSlider.value = 8;
+        AccelerationSlider.value = 2;
+        GripSlider.value = 8;
+        HandlingSlider.value = 2;
+        WeightSlider.value = 10;
 
         TopSpeedFill.color = new Color32(255, 125, 0, 255);
         AccelerationFill.color = new Color32(255, 125, 0, 255);
@@ -424,11 +424,11 @@ public class Garage : MonoBehaviour
         DozerBorder.SetActive(false);
         SkyCarBorder.SetActive(true);
 
-        TopSpeedSlider.value = 8;
-        AccelerationSlider.value = 8;
-        GripSlider.value = 8;
-        HandlingSlider.value = 8;
-        WeightSlider.value = 8;
+        TopSpeedSlider.value = 6;
+        AccelerationSlider.value = 6;
+        GripSlider.value = 6;
+        HandlingSlider.value = 6;
+        WeightSlider.value = 6;
 
         TopSpeedFill.color = new Color32(0, 255, 255, 255);
         AccelerationFill.color = new Color32(0, 255, 255, 255);
@@ -453,73 +453,73 @@ public class Garage : MonoBehaviour
 
     public void ClickPurchase()
     {
-        if(RC.activeInHierarchy && GlobalCash.TotalCash >= RCCost)
+        if(RC.activeInHierarchy && GlobalCash.TotalCredits >= RCCost)
         {
             FindObjectOfType<AudioManager>().Play("Cha-Ching");
-            GlobalCash.TotalCash = GlobalCash.TotalCash - RCCost;
+            GlobalCash.TotalCredits = GlobalCash.TotalCredits - RCCost;
             RCOwned = true;
             RCTick.SetActive(true);
             RCCross.SetActive(false);
             RCCost = 0;
             RacerPrice.GetComponent<TextMeshProUGUI>().text = "Owned";
-        } else if(UFO.activeInHierarchy && GlobalCash.TotalCash >= UFOCost)
+        } else if(UFO.activeInHierarchy && GlobalCash.TotalCredits >= UFOCost)
         {
             FindObjectOfType<AudioManager>().Play("Cha-Ching");
-            GlobalCash.TotalCash = GlobalCash.TotalCash - UFOCost;
+            GlobalCash.TotalCredits = GlobalCash.TotalCredits - UFOCost;
             UFOOwned = true;
             UFOTick.SetActive(true);
             UFOCross.SetActive(false);
             UFOCost = 0;
             RacerPrice.GetComponent<TextMeshProUGUI>().text = "Owned";
-        } else if(Taxi.activeInHierarchy && GlobalCash.TotalCash >= TaxiCost)
+        } else if(Taxi.activeInHierarchy && GlobalCash.TotalCredits >= TaxiCost)
         {
             FindObjectOfType<AudioManager>().Play("Cha-Ching");
-            GlobalCash.TotalCash = GlobalCash.TotalCash - TaxiCost;
+            GlobalCash.TotalCredits = GlobalCash.TotalCredits - TaxiCost;
             TaxiOwned = true;
             TaxiTick.SetActive(true);
             TaxiCross.SetActive(false);
             TaxiCost = 0;
             RacerPrice.GetComponent<TextMeshProUGUI>().text = "Owned";
-        } else if(Truck.activeInHierarchy && GlobalCash.TotalCash >= TruckCost)
+        } else if(Truck.activeInHierarchy && GlobalCash.TotalCredits >= TruckCost)
         {
             FindObjectOfType<AudioManager>().Play("Cha-Ching");
-            GlobalCash.TotalCash = GlobalCash.TotalCash - TruckCost;
+            GlobalCash.TotalCredits = GlobalCash.TotalCredits - TruckCost;
             TruckOwned = true;
             TruckTick.SetActive(true);
             TruckCross.SetActive(false);
             TruckCost = 0;
             RacerPrice.GetComponent<TextMeshProUGUI>().text = "Owned";
-        } else if(Tank.activeInHierarchy && GlobalCash.TotalCash >= TankCost)
+        } else if(Tank.activeInHierarchy && GlobalCash.TotalCredits >= TankCost)
         {
             FindObjectOfType<AudioManager>().Play("Cha-Ching");
-            GlobalCash.TotalCash = GlobalCash.TotalCash - TankCost;
+            GlobalCash.TotalCredits = GlobalCash.TotalCredits - TankCost;
             TankOwned = true;
             TankTick.SetActive(true);
             TankCross.SetActive(false);
             TankCost = 0;
             RacerPrice.GetComponent<TextMeshProUGUI>().text = "Owned";
-        } else if(Monster.activeInHierarchy && GlobalCash.TotalCash >= MonsterCost)
+        } else if(Monster.activeInHierarchy && GlobalCash.TotalCredits >= MonsterCost)
         {
             FindObjectOfType<AudioManager>().Play("Cha-Ching");
-            GlobalCash.TotalCash = GlobalCash.TotalCash - MonsterCost;
+            GlobalCash.TotalCredits = GlobalCash.TotalCredits - MonsterCost;
             MonsterOwned = true;
             MonsterTick.SetActive(true);
             MonsterCross.SetActive(false);
             MonsterCost = 0;
             RacerPrice.GetComponent<TextMeshProUGUI>().text = "Owned";
-        } else if (Dozer.activeInHierarchy && GlobalCash.TotalCash >= DozerCost)
+        } else if (Dozer.activeInHierarchy && GlobalCash.TotalCredits >= DozerCost)
         {
             FindObjectOfType<AudioManager>().Play("Cha-Ching");
-            GlobalCash.TotalCash = GlobalCash.TotalCash - DozerCost;
+            GlobalCash.TotalCredits = GlobalCash.TotalCredits - DozerCost;
             DozerOwned = true;
             DozerTick.SetActive(true);
             DozerCross.SetActive(false);
             DozerCost = 0;
             RacerPrice.GetComponent<TextMeshProUGUI>().text = "Owned";
-        } else if (SkyCar.activeInHierarchy && GlobalCash.TotalCash >= SkyCarCost)
+        } else if (SkyCar.activeInHierarchy && GlobalCash.TotalCredits >= SkyCarCost)
         {
             FindObjectOfType<AudioManager>().Play("Cha-Ching");
-            GlobalCash.TotalCash = GlobalCash.TotalCash - SkyCarCost;
+            GlobalCash.TotalCredits = GlobalCash.TotalCredits - SkyCarCost;
             SkyCarOwned = true;
             SkyCarTick.SetActive(true);
             SkyCarCross.SetActive(false);

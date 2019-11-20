@@ -5,18 +5,18 @@ using TMPro;
 
 public class GlobalCash : MonoBehaviour
 {
-    public int CashValue;
-    public static int TotalCash;
-    public GameObject CashDisplay;
+    public int CreditsValue;
+    public static int TotalCredits;
+    public GameObject CreditsDisplay;
     
     void Start()
     {
-        TotalCash = PlayerPrefs.GetInt("SavedCash");
+        TotalCredits = PlayerPrefs.GetInt("SavedCash");
     }
 
     void Update()
     {
-        CashValue = TotalCash;
-        CashDisplay.GetComponent<TextMeshProUGUI>().text = "Money: $" + CashValue;
+        CreditsValue = TotalCredits;
+        CreditsDisplay.GetComponent<TextMeshProUGUI>().text = "Credits: $" + CreditsValue;
     }
 }

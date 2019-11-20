@@ -4,9 +4,9 @@ using UnityStandardAssets.Vehicles.Car;
 
 public class RaceTimer : MonoBehaviour
 {
-    private float countdownTimer = 3;
+    public float countdownTimer = 3;
     public static float cTimer;
-    private bool raceTimer = false;
+    public bool raceTimer = false;
 
     public static bool finished;
     public static int MinuteCount;
@@ -23,15 +23,14 @@ public class RaceTimer : MonoBehaviour
     public GameObject CountdownContainer;
     public GameObject SpeedUI;
 
-    bool raceStarted = false;
+    public bool raceStarted = false;
     GameObject[] AICars;
     GameObject Player;
 
     private void Start()
     {
-        CountdownContainer.SetActive(true);
         cTimer = countdownTimer;
-        FindObjectOfType<AudioManager>().Play("Race1Music");
+        finished = false;
     }
 
     void Update()
@@ -44,11 +43,12 @@ public class RaceTimer : MonoBehaviour
 
             magnitudeSpeed = Player.GetComponent<Rigidbody>().velocity.magnitude;
             mphSpeed = magnitudeSpeed * 2.222;
-            SpeedUI.GetComponent<TextMeshProUGUI>().text = mphSpeed.ToString("F0");
+            SpeedUI.GetComponent<TextMeshProUGUI>().text = mphSpeed.ToString("F0") + "mph";
 
             //start 3 second race countdown
             if (raceTimer == false)
             {
+                CountdownContainer.SetActive(true);
                 PauseMenu.gameIsPaused = true;
                 cTimer -= Time.deltaTime;
             }
@@ -56,9 +56,11 @@ public class RaceTimer : MonoBehaviour
             //Race starts
             if (cTimer <= 0f)
             {
+                FindObjectOfType<AudioManager>().Play("Race1Music");
                 PauseMenu.gameIsPaused = false;
                 raceTimer = true;
                 raceStarted = true;
+                cTimer = 3;
             }
 
             //Start lap timer

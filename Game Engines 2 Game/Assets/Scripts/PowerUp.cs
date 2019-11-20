@@ -16,8 +16,7 @@ public class PowerUp : MonoBehaviour
 
     private int randomNum;
 
-    public float grow = 2f;
-    public float shrink = 0.5f;
+    public float grow;
 
     public float rotateSpeed;
 
@@ -28,40 +27,44 @@ public class PowerUp : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") || other.CompareTag("AICar"))
         {
+            if (other.CompareTag("Player"))
+            {
+                FindObjectOfType<AudioManager>().Play("PickUp");
+            }
+
             Instantiate(pickupEffect, transform.position, transform.rotation);
-            FindObjectOfType<AudioManager>().Play("PickUp");
             StartCoroutine(respawnCountdown());
 
-            randomNum = UnityEngine.Random.Range(0, 1);
+            randomNum = UnityEngine.Random.Range(1, 1);
             if (randomNum == 0)
             {
-                StartCoroutine( PickupGrow(other));
+                StartCoroutine(PickupGrow(other));
             }
             else if (randomNum == 1)
             {
-                StartCoroutine( PickupShrink(other));
+                StartCoroutine(PickupShrink(other));
             }
             /*else if (RandomNum == 2)
             {
-                StartCoroutine( PickupBoost(other));
+                StartCoroutine(PickupBoost(other));
             }
             else if (RandomNum == 3)
             {
-                StartCoroutine( PickupBlur(other));
+                StartCoroutine(PickupBlur(other));
             }
             else if (RandomNum == 4)
             {
-                StartCoroutine( Pickup(other));
+                StartCoroutine(Pickup(other));
             }
             else if (RandomNum == 5)
             {
-                StartCoroutine( Pickup(other));
+                StartCoroutine(Pickup(other));
             }
             else
             {
-                StartCoroutine( Pickup(other));
+                StartCoroutine(Pickup(other));
             }*/
         }
     }
@@ -92,15 +95,19 @@ public class PowerUp : MonoBehaviour
         racer.transform.localScale *= grow;
         yield return new WaitForSeconds(effectDuration);
         racer.transform.localScale /= grow;
+
+        FindObjectOfType<AudioManager>().Play("Debuff");
     }
 
     IEnumerator PickupShrink(Collider racer)
     {
         FindObjectOfType<AudioManager>().Play("Debuff");
 
-        racer.transform.localScale *= shrink;
+        racer.transform.localScale /= grow;
         yield return new WaitForSeconds(effectDuration);
-        racer.transform.localScale /= shrink;
+        racer.transform.localScale *= grow;
+
+        FindObjectOfType<AudioManager>().Play("Buff");
     }
 
     /*IEnumerator PickupBoost(Collider racer)

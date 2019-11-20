@@ -49,6 +49,8 @@ public class ChooseRacer : MonoBehaviour
 
     void Start()
     {
+        RacerChosen = false;
+
         PauseMenu.gameIsPaused = true;
 
         if(Garage.RCOwned == true)

@@ -429,6 +429,6 @@ MonoBehaviour:
   child4: {fileID: 4197796795305952759}
   respawnDuration: 7
   effectDuration: 10
-  grow: 2
+  grow: 1.5
   shrink: 0.5
   rotateSpeed: 75

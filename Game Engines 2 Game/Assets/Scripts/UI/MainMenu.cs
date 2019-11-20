@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using TMPro;
 
 public class MainMenu : MonoBehaviour
 {
@@ -8,6 +9,11 @@ public class MainMenu : MonoBehaviour
     public GameObject AI_raceTrackUI;
     public GameObject TimeTrial_TrackUI;
     public GameObject settingsUI;
+
+    public void ResetCredits() // reset credits total to 0
+    {
+        PlayerPrefs.DeleteAll();
+    }
 
     public void RaceTypeSelect()
     {

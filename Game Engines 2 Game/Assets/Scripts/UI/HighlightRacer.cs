@@ -62,11 +62,11 @@ public class HighlightRacer : MonoBehaviour
         SkyCarBorder.SetActive(false);
         RandomBorder.SetActive(false);
 
-        TopSpeedSlider.value = 1;
-        AccelerationSlider.value = 1;
-        GripSlider.value = 1;
-        HandlingSlider.value = 1;
-        WeightSlider.value = 1;
+        TopSpeedSlider.value = 2;
+        AccelerationSlider.value = 10;
+        GripSlider.value = 6;
+        HandlingSlider.value = 10;
+        WeightSlider.value = 2;
 
         TopSpeedFill.color = new Color32(0, 0, 255, 255);
         AccelerationFill.color = new Color32(0, 0, 255, 255);
@@ -101,11 +101,11 @@ public class HighlightRacer : MonoBehaviour
         SkyCarBorder.SetActive(false);
         RandomBorder.SetActive(false);
 
-        TopSpeedSlider.value = 2;
-        AccelerationSlider.value = 2;
+        TopSpeedSlider.value = 10;
+        AccelerationSlider.value = 10;
         GripSlider.value = 2;
-        HandlingSlider.value = 2;
-        WeightSlider.value = 2;
+        HandlingSlider.value = 4;
+        WeightSlider.value = 4;
 
         TopSpeedFill.color = new Color32(169, 169, 169, 255);
         AccelerationFill.color = new Color32(169, 169, 169, 255);
@@ -140,11 +140,11 @@ public class HighlightRacer : MonoBehaviour
         SkyCarBorder.SetActive(false);
         RandomBorder.SetActive(false);
 
-        TopSpeedSlider.value = 3;
-        AccelerationSlider.value = 3;
-        GripSlider.value = 3;
-        HandlingSlider.value = 3;
-        WeightSlider.value = 3;
+        TopSpeedSlider.value = 6;
+        AccelerationSlider.value = 8;
+        GripSlider.value = 6;
+        HandlingSlider.value = 6;
+        WeightSlider.value = 4;
 
         TopSpeedFill.color = new Color32(255, 255, 0, 255);
         AccelerationFill.color = new Color32(255, 255, 0, 255);
@@ -179,11 +179,11 @@ public class HighlightRacer : MonoBehaviour
         SkyCarBorder.SetActive(false);
         RandomBorder.SetActive(false);
 
-        TopSpeedSlider.value = 4;
-        AccelerationSlider.value = 4;
-        GripSlider.value = 4;
+        TopSpeedSlider.value = 6;
+        AccelerationSlider.value = 6;
+        GripSlider.value = 6;
         HandlingSlider.value = 4;
-        WeightSlider.value = 4;
+        WeightSlider.value = 8;
 
         TopSpeedFill.color = new Color32(255, 0, 0, 255);
         AccelerationFill.color = new Color32(255, 0, 0, 255);
@@ -218,11 +218,11 @@ public class HighlightRacer : MonoBehaviour
         SkyCarBorder.SetActive(false);
         RandomBorder.SetActive(false);
 
-        TopSpeedSlider.value = 5;
-        AccelerationSlider.value = 5;
-        GripSlider.value = 5;
-        HandlingSlider.value = 5;
-        WeightSlider.value = 5;
+        TopSpeedSlider.value = 4;
+        AccelerationSlider.value = 2;
+        GripSlider.value = 8;
+        HandlingSlider.value = 6;
+        WeightSlider.value = 10;
 
         TopSpeedFill.color = new Color32(0, 150, 0, 255);
         AccelerationFill.color = new Color32(0, 150, 0, 255);
@@ -258,10 +258,10 @@ public class HighlightRacer : MonoBehaviour
         RandomBorder.SetActive(false);
 
         TopSpeedSlider.value = 6;
-        AccelerationSlider.value = 6;
-        GripSlider.value = 6;
-        HandlingSlider.value = 6;
-        WeightSlider.value = 6;
+        AccelerationSlider.value = 8;
+        GripSlider.value = 4;
+        HandlingSlider.value = 4;
+        WeightSlider.value = 8;
 
         TopSpeedFill.color = new Color32(125, 0, 255, 255);
         AccelerationFill.color = new Color32(125, 0, 255, 255);
@@ -296,11 +296,11 @@ public class HighlightRacer : MonoBehaviour
         SkyCarBorder.SetActive(false);
         RandomBorder.SetActive(false);
 
-        TopSpeedSlider.value = 7;
-        AccelerationSlider.value = 7;
-        GripSlider.value = 7;
-        HandlingSlider.value = 7;
-        WeightSlider.value = 7;
+        TopSpeedSlider.value = 8;
+        AccelerationSlider.value = 2;
+        GripSlider.value = 8;
+        HandlingSlider.value = 2;
+        WeightSlider.value = 10;
 
         TopSpeedFill.color = new Color32(255, 125, 0, 255);
         AccelerationFill.color = new Color32(255, 125, 0, 255);
@@ -335,11 +335,11 @@ public class HighlightRacer : MonoBehaviour
         SkyCarBorder.SetActive(true);
         RandomBorder.SetActive(false);
 
-        TopSpeedSlider.value = 8;
-        AccelerationSlider.value = 8;
-        GripSlider.value = 8;
-        HandlingSlider.value = 8;
-        WeightSlider.value = 8;
+        TopSpeedSlider.value = 6;
+        AccelerationSlider.value = 6;
+        GripSlider.value = 6;
+        HandlingSlider.value = 6;
+        WeightSlider.value = 6;
 
         TopSpeedFill.color = new Color32(0, 255, 255, 255);
         AccelerationFill.color = new Color32(0, 255, 255, 255);

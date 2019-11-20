@@ -17,15 +17,20 @@ public class LapComplete : MonoBehaviour
     public GameObject FrontCam;
 
     public int playerLapsDone = 1;
-    public int RCLapsDone = 1;
+    /*public int RCLapsDone = 1;
     public int UFOLapsDone = 1;
     public int TaxiLapsDone = 1;
     public int TruckLapsDone = 1;
     public int TankLapsDone = 1;
     public int DozerLapsDone = 1;
     public int MonsterLapsDone = 1;
-    public int SkyCarLapsDone = 1;
+    public int SkyCarLapsDone = 1;*/
+
     public float RawTime;
+    public int firstPlaceWinnings = 500;
+    public int secondPlaceWinnings = 300;
+    public int thirdPlaceWinnings = 100;
+    public GameObject winningsDisplay;
 
     GameObject Player;
     GameObject AIRC;
@@ -40,14 +45,14 @@ public class LapComplete : MonoBehaviour
     private void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
-        AIRC = GameObject.FindGameObjectWithTag("AIRC");
+        /*AIRC = GameObject.FindGameObjectWithTag("AIRC");
         AIUFO = GameObject.FindGameObjectWithTag("AIUFO");
         AITaxi = GameObject.FindGameObjectWithTag("AITaxi");
         AITruck = GameObject.FindGameObjectWithTag("AITruck");
         AITank = GameObject.FindGameObjectWithTag("AITank");
         AIDozer = GameObject.FindGameObjectWithTag("AIDozer");
         AIMonster = GameObject.FindGameObjectWithTag("AIMonster");
-        AISkyCar = GameObject.FindGameObjectWithTag("AISkyCar");
+        AISkyCar = GameObject.FindGameObjectWithTag("AISkyCar");*/
     }
 
     void OnTriggerEnter(Collider other)
@@ -79,7 +84,7 @@ public class LapComplete : MonoBehaviour
                 BestMilliDisplay.GetComponent<TextMeshProUGUI>().text = "" + RaceTimer.MilliCount.ToString("F0");
             }
 
-            if (playerLapsDone >= 3) //race complete
+            if (playerLapsDone >= 1) //race complete
             {
                 PauseMenu.gameIsPaused = true;
                 Player.GetComponent<CarUserControl>().enabled = false;
@@ -89,8 +94,29 @@ public class LapComplete : MonoBehaviour
                 RaceTimer.finished = true;
                 RaceCompleteCam.SetActive(true);
                 FrontCam.SetActive(false);
-                GlobalCash.TotalCash += 100;
-                PlayerPrefs.SetInt("SavedCash", GlobalCash.TotalCash);
+
+                if(PlayerPos.playerPosition == 1)
+                {
+                    GlobalCash.TotalCredits += firstPlaceWinnings;
+                    winningsDisplay.GetComponent<TextMeshProUGUI>().text = "Winnings: $" + firstPlaceWinnings;
+                    PlayerPrefs.SetInt("SavedCash", GlobalCash.TotalCredits);
+                }
+                else if (PlayerPos.playerPosition == 2)
+                {
+                    GlobalCash.TotalCredits += secondPlaceWinnings;
+                    winningsDisplay.GetComponent<TextMeshProUGUI>().text = "Winnings: $" + secondPlaceWinnings;
+                    PlayerPrefs.SetInt("SavedCash", GlobalCash.TotalCredits);
+                }
+                else if (PlayerPos.playerPosition == 3)
+                {
+                    GlobalCash.TotalCredits += thirdPlaceWinnings;
+                    winningsDisplay.GetComponent<TextMeshProUGUI>().text = "Winnings: $" + thirdPlaceWinnings;
+                    PlayerPrefs.SetInt("SavedCash", GlobalCash.TotalCredits);
+                }
+                else
+                {
+                    winningsDisplay.GetComponent<TextMeshProUGUI>().text = "Winnings: $0";
+                }
             }
 
             PlayerPrefs.SetInt("BestMinSave", RaceTimer.MinuteCount);
